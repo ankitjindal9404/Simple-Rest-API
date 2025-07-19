@@ -37,8 +37,9 @@ jobs:
     - name: Install Newman
       run: npm install -g newman
 
+    - name: Running app
+      run: python app.py
+      
     # Step 5: Run API tests using Newman
     - name: Run API tests
-      run: |
-        python app.py
-        newman run tests/postman_collection.json
+      run: newman run tests/postman_collection.json
