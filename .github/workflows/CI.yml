@@ -31,6 +31,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install argument
         pip install -r requirements.txt --verbose
     
     # Step 4: Install Newman (for running Postman tests)
