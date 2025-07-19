@@ -33,13 +33,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt --verbose
     
+    - name: Running app
+      run: |
+        nohup python app.py
+
     # Step 4: Install Newman (for running Postman tests)
     - name: Install Newman
       run: npm install -g newman
 
-    - name: Running app
-      run: |
-        nohup python app.py
 
     # Step 5: Run API tests using Newman
     - name: Run API tests
