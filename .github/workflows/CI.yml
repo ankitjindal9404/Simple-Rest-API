@@ -39,4 +39,6 @@ jobs:
 
     # Step 5: Run API tests using Newman
     - name: Run API tests
-      run: newman run tests/postman_collection.json
+      run: |
+        python app.py
+        newman run tests/postman_collection.json
