@@ -37,6 +37,9 @@ jobs:
       run: |
         nohup python app.py
 
+    - name: Wait for Flask app to start
+      run: sleep 5  # Wait for 5 seconds for the Flask app to be ready (adjust if necessary)
+
     # Step 4: Install Newman (for running Postman tests)
     - name: Install Newman
       run: npm install -g newman
